@@ -5,7 +5,7 @@ import openai
 import os
 import requests
 
-openai_key = "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"
+openai_key = "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"
 
 openai.api_key = openai_key
 
@@ -50,7 +50,7 @@ params = {
     "model": "gpt-4-vision-preview",
     "messages": [PROMPT_MESSAGES],
     # "headers": {"Openai-Version": "2020-11-07"},
-    "max_tokens": 400,
+    "max_tokens": 300,
 }
 
 result = openai.chat.completions.create(**params)
