@@ -7,9 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# openai_key = os.getenv('OPENAI_API_KEY')
-
-image_path = "fit.jpeg"
+image_path = "fit3.jpg"
 
 def encode_image(image_path):
   with open(image_path, "rb") as image_file:
@@ -53,16 +51,15 @@ print(response.json()['choices'][0]['message']['content'])
 fit_description =response.json()['choices'][0]['message']['content']
 
 prompt_message=[
-    # {"role": "system", "content": "You are an assistant that rates outfits based on the description given to you on a scale of 0-10 (decimals allowed). Only give the number, there's no need to give any text."},
-    {"role": "system", "content": "You are an assistant that aggressively roasts outfits based on the description given to you in a funny way."},
+    {"role": "system", "content": "You are an assistant that says 'Smash' or 'Pass' based on the description of the outfit given to you. 'Smash' means that the outfit is coherent and sexy, whereas 'pass' means otherwise. Don't be afraid to say 'pass' on something, you need to be brutaly honest. Say only 1 word."},
     {"role": "user", "content": fit_description},
-    # {"role": "assistant", "content": ""},
   ]
 
 response_2 = openai.chat.completions.create(
   model="gpt-3.5-turbo-1106",
 #   response_format={ "type": "json_object" },
   messages=prompt_message,
-  temperature=1
+  temperature=1,
+  max_tokens = 200
 )
 print(response_2.choices[0].message.content)
