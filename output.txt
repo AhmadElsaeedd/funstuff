@@ -1,0 +1,30 @@
+202011: Sports, Fitness, Football, Socializing
+202012: Travel, History, Sports, Fashion
+202101: Travel, Humor, Fitness, Studying
+202103: Martial Arts, Coffee, Socializing
+202104: Grooming, Food, Socializing, University
+202106: Boxing, technology, socializing, celebrations.
+202107: Fitness, Food, Faith, Reflection
+202109: Social, Fashion, Friendship, Self-Expression
+202110: Education, Socializing, Fashion, Fitness
+202111: Religious Faith Inspirational Content
+202202: Sports, Academia, Motivation, Friendship
+202203: Travel, Technology, Culture, Self-expression
+202204: Engineering, Education, Technology, Academia
+202205: Sports, Travel, Inspiration, Relaxation
+202206: Travel, Architecture, Graduation, Friendship
+202207: Live Music, Travel, Socializing, Entertainment
+202210: Sports, Investing, Celebrities, Entertainment
+202211: Boxing, Fitness, Education, Scholarship
+202212: Academia, sports, personal moments.
+202301: Boxing, Fitness, Travel, Home
+202302: Fitness, Technology, Outdoors, Socializing
+202303: Running, Cityscapes, Movies, Relaxation
+202304: Entrepreneurship, Travel, Culture, Fitness
+202305: Running, Football, Socializing, Nighttime
+202306: Entrepreneurship, Running, Travel, Nostalgia
+202307: Tech Entrepreneurship, App Development, Social Networking, Team Collaboration
+202308: Fitness, Technology, Socializing, Travel
+202309: Coding, Learning, Socializing, Motivation
+202310: Startups, Technology, Running, Travel
+202311: Social Awareness, Technology, Entrepreneurship, Communication

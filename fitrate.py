@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-image_path = "fit3.jpg"
+image_path = "mawadda2.jpg"
 
 def encode_image(image_path):
   with open(image_path, "rb") as image_file:
@@ -57,7 +57,6 @@ prompt_message=[
 
 response_2 = openai.chat.completions.create(
   model="gpt-3.5-turbo-1106",
-#   response_format={ "type": "json_object" },
   messages=prompt_message,
   temperature=1,
   max_tokens = 200

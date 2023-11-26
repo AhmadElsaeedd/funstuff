@@ -46,7 +46,6 @@ for i in range(1, 8):  # Loop from 1 to 7
 
     response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
     fit_description = response.json()['choices'][0]['message']['content']
-    # print(fit_description)
 
     prompt_message = [
         # {"role": "system", "content": "You are an assistant that says 'Smash' or 'Pass' based on the description of the outfit given to you. 'Smash' means that the outfit is attractive, whereas 'pass' means otherwise. Don't be afraid to say 'pass' on something, you need to be brutally honest. Say only 1 word, then a sentence justifying why you said that word."},
@@ -62,4 +61,4 @@ for i in range(1, 8):  # Loop from 1 to 7
     )
 
     print(f"Response for image {i}:", response_2.choices[0].message.content)
-    time.sleep(1)  # Pause to avoid hitting rate limits
+    time.sleep(1)
