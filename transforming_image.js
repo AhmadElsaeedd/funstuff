@@ -1,9 +1,9 @@
 const sharp = require('sharp');
 
-sharp('ahmad.png')
+sharp('IMG_9218.png')
   .ensureAlpha() // This will add an alpha channel if it doesn't exist
   .toColourspace('rgba') // Convert to RGBA color space
-  .toFile('ahmad_ready.png', (err, info) => {
+  .toFile('Mawadda_RGBA.png', (err, info) => {
     if (err) throw err;
     console.log('Image converted to RGBA and saved as', info);
   });
