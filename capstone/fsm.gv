@@ -1,0 +1,26 @@
+digraph finite_state_machine {
+	dpi=600 rankdir=LR size=24
+	node [fontsize=40 shape=circle]
+	edge [fontsize=30]
+	node [shape=circle]
+	S [label=Start]
+	IU [label="Image Upload"]
+	CI [label="Crop Identification"]
+	DD [label="Disease Diagnosis"]
+	RS [label="Recommendation 
+(Disease Specific)"]
+	MA [label="Maintenance Advice"]
+	FR [label="Fertilization Recommendation"]
+	FB [label=Feedback]
+	E [label=End]
+	S -> IU [label="Upload Image"]
+	IU -> CI [label="Image Validated"]
+	CI -> DD [label="Crop Identified"]
+	DD -> RS [label="Disease Detected"]
+	DD -> MA [label="No Disease"]
+	RS -> MA [label="Advice Given"]
+	MA -> FR [label="Maintenance Tips Provided"]
+	FR -> FB [label="Fertilization Suggested"]
+	FB -> E [label="Feedback Collected"]
+	E -> S [label="Restart/End Session"]
+}

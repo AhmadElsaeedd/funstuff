@@ -59,7 +59,7 @@ async function main() {
     // console.log("Assistant created:", assistant);
 
     const myAssistant = await openai.beta.assistants.retrieve(
-        "asst_vea0ryNEyBs7fC5zU7Yayxac"
+        "asst_miXXdPGRpxaQlQ4QtUCrXWYG"
       );
 
     console.log("Assistant retrieved:", myAssistant);
@@ -73,27 +73,26 @@ async function main() {
     
     console.log("Thread retrieved: ", myThread);
 
-    const message_file = await openai.files.create({
-        file: fs.createReadStream("image.pdf"),
-        purpose: "assistants",
-      });
+    // const message_file = await openai.files.create({
+    //     file: fs.createReadStream("image.pdf"),
+    //     purpose: "assistants",
+    //   });
 
-    console.log("message file: ", message_file);
+    // console.log("message file: ", message_file);
 
-    const message = await openai.beta.threads.messages.create(
+    await openai.beta.threads.messages.create(
         myThread.id,
         {
           role: "user",
-          content: "Can you generate a pixelated avatar to use for a profile (only face with shoulders, white background) using the picture that I give you in the file? Put the image in a pdf so I can extract it later.",
-          file_ids: [message_file.id],
+          content: "How are you doing today?",
         }
       );
 
-    const threadMessages = await openai.beta.threads.messages.list(
-        myThread.id
-      );
+    // const threadMessages = await openai.beta.threads.messages.list(
+    //     myThread.id
+    //   );
     
-    console.log("Messages in the thread before run: ", threadMessages.data);
+    // console.log("Messages in the thread before run: ", threadMessages.data);
 
     //Create run
     const run = await openai.beta.threads.runs.create(
@@ -108,7 +107,7 @@ async function main() {
     const messages = await openai.beta.threads.messages.list(
         myThread.id
       );
-    console.log("Messages in the thread after run: ", messages.data);
+    console.log("POTENTIAL RESPONSE IS: ", messages.data[0].content[0].text.value);
 
 
     // const messages = await openai.beta.threads.messages.list(
@@ -118,11 +117,11 @@ async function main() {
     // console.log("Messages in the run are: ", messages.data[0].id);
 
 
-    const messageFiles = await openai.beta.threads.messages.files.list(
-        myThread.id,
-        messages.data[0].id
-      );
-    console.log("Message files are: ", messageFiles);
+    // const messageFiles = await openai.beta.threads.messages.files.list(
+    //     myThread.id,
+    //     messages.data[0].id
+    //   );
+    // console.log("Message files are: ", messageFiles);
     
   } catch (error) {
     console.error("Error:", error);
